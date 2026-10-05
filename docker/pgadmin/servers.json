@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Studex Local PostgreSQL",
+      "Group": "Studex",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "studex",
+      "Username": "studex",
+      "SSLMode": "prefer"
+    }
+  }
+}

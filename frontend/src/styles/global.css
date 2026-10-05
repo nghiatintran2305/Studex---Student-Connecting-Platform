@@ -1,0 +1,18 @@
+/* Shared foundation; feature-specific styles can be added beside each component. */
+:root { font-family: system-ui, sans-serif; color: #182238; background: #f4f6fb; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.container { width: min(760px, 100%); margin: 8vh auto; padding: 24px; }
+.badge { color: #3156be; font-size: .8rem; font-weight: 700; letter-spacing: .12em; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; }
+.intro { color: #526078; line-height: 1.7; }
+.status-panel { margin-top: 32px; padding: 28px; border: 1px solid #dce2f0; border-radius: 16px; background: white; }
+h2 { margin-top: 0; }
+dl { display: grid; grid-template-columns: 130px 1fr; gap: 14px; line-height: 1.5; }
+dt { color: #526078; }
+dd { margin: 0; overflow-wrap: anywhere; }
+button { margin-top: 12px; border: 0; border-radius: 8px; padding: 12px 18px; color: white; background: #3156be; cursor: pointer; font: inherit; }
+button:disabled { opacity: .6; cursor: wait; }
+button:focus-visible { outline: 3px solid #9fb8ff; outline-offset: 3px; }
+.error { color: #b42318; }
+@media (max-width: 480px) { dl { grid-template-columns: 1fr; gap: 8px; } dd { margin-bottom: 8px; } }

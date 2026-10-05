@@ -1,0 +1,14 @@
+# Local credentials, generated files, and IDE metadata.
+.env
+.env.*
+!.env.example
+.scratch/
+**/target/
+**/node_modules/
+**/dist/
+**/.vite/
+*.log
+.idea/
+.vscode/
+*.iml
+.DS_Store

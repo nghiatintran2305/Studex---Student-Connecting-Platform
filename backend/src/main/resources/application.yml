@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: studex-backend
+  datasource:
+    # Defaults support a Java process on the host; Docker overrides DB_HOST.
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:studex}
+    username: ${DB_USERNAME:studex}
+    password: ${DB_PASSWORD:studex_local_2026}
+    hikari:
+      connection-timeout: 5000
+  jpa:
+    # Prevent queries during response serialization and accidental schema edits.
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+server:
+  port: ${SERVER_PORT:8088}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      # Return readiness without exposing database connection details.
+      show-details: never
